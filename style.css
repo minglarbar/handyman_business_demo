@@ -20,7 +20,9 @@ body{
     margin-bottom: 40px;
 }
 
-
+* {
+    box-sizing: border-box;
+}
 
 /* Common settings Ends*/
 
@@ -44,16 +46,31 @@ body{
     align-items: center;
     gap:10px;
 }
+
 .logo{
     height:40px;
     margin-left:24px;
     background-color: orange;
     border-radius: 7px;
 }
+
+.logo:hover{
+    transform:scale(1.1);
+}
 .logo-text{
     font-weight:bold;
     font-size:18px;
     color:orange;
+}
+/* Defines the animation stages */
+@keyframes color-change {
+  0% {
+    color: rgb(132, 192, 72); /* Start color */
+  }
+  100% {
+    color:green; /* End Color */
+  }
+
 }
 
 .nav{
@@ -70,14 +87,13 @@ body{
 .nav a:hover{
     font-weight: bold;
     transform: scale(1.01);
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.8); 
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.8);
 }
 .nav-link{
     border:1px solid orange;
     padding:10px;
     border-radius: 20px;
 }
-
 
 .header-right-section{
     display: flex;
@@ -121,6 +137,7 @@ body{
     margin-bottom: 3px;
     /* margin-left:10px; */
 }
+
 /* -------------------------------------------------- */
 /* Header End */
 /* -------------------------------------------------- */
@@ -151,14 +168,12 @@ body{
 /* -------------------------------------------------- */
 /* Hero Section Start */
 /* -------------------------------------------------- */
- .hero{
+.hero{
     background-image: url("images/hero-1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     min-height: 100vh;
-
     display: flex;
 }
 
@@ -168,7 +183,7 @@ body{
 
     /* background: rgba(170, 141, 141, 0.85);  */
 
-background: rgba(71, 70, 70, 0.65);
+    background: rgba(71, 70, 70, 0.65);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -178,7 +193,6 @@ background: rgba(71, 70, 70, 0.65);
     padding: 0px 20px;
     color: white;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1{
@@ -210,7 +224,7 @@ h2{
     cursor:pointer;
 }
 .hero_call{
-    width: 82px;
+    width: 132px;
 }
 .btn:hover{
     transform:translateY(-2px);
@@ -243,17 +257,14 @@ h2{
 /* -------------------------------------------------- */
 
 
-
-
-
-
 /* -------------------------------------------------- */
 /* Services Section Starts */
 /* -------------------------------------------------- */
 .service_section{
     padding-top:200px;
-    transform: translateY(-140px);
+    /* transform: translateY(-140px); */
 }
+
 
 .grid{
     display:grid;
@@ -275,28 +286,31 @@ h2{
 .service p{
     text-align: left;
 }
-.service:hover{
-  transform:translateY(-8px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+.service:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 .img{
     height:160px;
     background:#e5e7eb;
     border-radius:6px;
     /* margin-bottom:15px; */
-    padding-top:80px;
+    padding-top:35px;
 }
 /* -------------------------------------------------- */
 /* Services Section Ends */
 /* -------------------------------------------------- */
+
+
+
+
 
 /* -------------------------------------------------- */
 /* Contacts Section Starts */
 /* -------------------------------------------------- */
 
 .contact_section{
-
-    transform: translateY(-80px);
+    margin-top:100px;
 }
 
 .contacts_container{
@@ -379,7 +393,9 @@ h2{
 /* -------------------------------------------------- */
 /* Review Section Starts */
 /* -------------------------------------------------- */
-
+.review_section{
+    margin-top:100px;
+}
 .testimonial-slider{
   position:relative;
   max-width:700px;
@@ -420,11 +436,15 @@ font-size:clamp(16px,2.5vw,20px);
     display:flex;
     flex-direction:column;
     gap:12px;
+    width:100%;
 }
 input, textarea, select{
     padding:10px;
     border:1px solid orange;
     border-radius:6px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 100%;
 }
 #quotes{
     scroll-margin-top: 100px;
@@ -546,7 +566,6 @@ animation:pop 0.4s ease;
 
 #mainNav a{
     margin:10px 0;
-    text-align: center;
 }
 
 .menu-toggle{
@@ -563,5 +582,9 @@ animation:pop 0.4s ease;
     gap:15px;
     font-size:14px;
 }
+
+.service{
+        max-width: 100%;
+    }
 
 }
