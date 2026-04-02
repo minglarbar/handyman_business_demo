@@ -570,10 +570,6 @@ animation:pop 0.4s ease;
     font-weight: bolder;
 }
 
-#mainNav a:hover{
-    transform:scale(1.1);
-}
-
 .menu-toggle{
     display:block;
 }
